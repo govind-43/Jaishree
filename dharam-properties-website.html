@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dharam Properties | Real Estate in Govindpuri, Kalkaji</title>
+<meta name="description" content="Dharam Properties — trusted real estate services in Govindpuri, Kalkaji, New Delhi. Explore residential and commercial property opportunities and connect for a consultation.">
+<meta name="theme-color" content="#10100f">
+
+<style>
+:root{
+  --bg:#0b0c0c;
+  --surface:#111313;
+  --surface2:#171919;
+  --line:rgba(255,255,255,.10);
+  --text:#f4f1e9;
+  --muted:#a9aaa6;
+  --accent:#d8b36a;
+  --accent2:#f0d29a;
+  --dark:#11100d;
+  --radius:22px;
+  --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.6;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+.eyebrow{
+  color:var(--accent2);text-transform:uppercase;letter-spacing:.18em;
+  font-size:11px;font-weight:700;
+}
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(11,12,12,.72);backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.03em}
+.logo-mark{
+  width:38px;height:38px;border:1px solid rgba(216,179,106,.7);
+  display:grid;place-items:center;border-radius:11px;color:var(--accent2);
+  font-size:14px;
+}
+.logo span{font-size:15px}
+.nav-links{display:flex;gap:30px;color:#c7c8c4;font-size:13px}
+.nav-links a:hover{color:white}
+.nav-cta,.btn{
+  border:0;border-radius:999px;padding:12px 18px;font-weight:750;
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+}
+.nav-cta,.btn-primary{background:var(--accent);color:#17130b}
+.btn-secondary{border:1px solid var(--line);background:rgba(255,255,255,.03);color:white}
+.menu{display:none;background:none;border:0;color:white;font-size:25px}
+
+.hero{
+  min-height:780px;padding:150px 0 70px;position:relative;display:flex;align-items:center;
+  background:
+    linear-gradient(90deg,rgba(5,6,6,.97) 0%,rgba(5,6,6,.72) 47%,rgba(5,6,6,.18) 100%),
+    linear-gradient(180deg,rgba(5,6,6,.25),var(--bg)),
+    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85") center/cover;
+}
+.hero:after{content:"";position:absolute;inset:auto 0 0;height:180px;background:linear-gradient(transparent,var(--bg));pointer-events:none}
+.hero-content{position:relative;z-index:2;max-width:720px}
+.hero h1{font-size:clamp(48px,7vw,88px);line-height:.98;letter-spacing:-.065em;margin:16px 0 24px}
+.hero h1 em{font-style:normal;color:var(--accent2)}
+.hero p{font-size:17px;color:#c3c4c0;max-width:600px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.rating{display:flex;align-items:center;gap:10px;margin-top:28px;color:#d7d7d2;font-size:13px}
+.stars{color:var(--accent2);letter-spacing:2px}
+.hero-badge{
+  position:absolute;right:6%;bottom:110px;z-index:3;width:230px;padding:18px;
+  background:rgba(17,19,19,.75);border:1px solid var(--line);backdrop-filter:blur(15px);
+  border-radius:18px;
+}
+.hero-badge strong{display:block;font-size:28px}.hero-badge small{color:var(--muted)}
+
+.search-wrap{margin-top:-45px;position:relative;z-index:10}
+.search-box{
+  background:#151716;border:1px solid var(--line);border-radius:22px;padding:20px;
+  box-shadow:0 20px 70px rgba(0,0,0,.3);display:grid;grid-template-columns:repeat(4,1fr) auto;gap:10px;
+}
+.field{background:#0e1010;border:1px solid rgba(255,255,255,.08);border-radius:13px;padding:9px 12px}
+.field label{display:block;color:#858782;font-size:10px;text-transform:uppercase;letter-spacing:.12em}
+.field select,.field input{width:100%;background:none;border:0;outline:0;color:white;padding-top:3px}
+.field option{background:#171919}
+.search-box .btn{min-width:110px}
+
+section{padding:105px 0}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:34px}
+.section-head h2{font-size:clamp(32px,4vw,54px);line-height:1.05;letter-spacing:-.05em;margin-top:9px}
+.section-head p{max-width:470px;color:var(--muted)}
+.grid{display:grid;gap:18px}
+.properties{grid-template-columns:repeat(3,1fr)}
+.card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;transition:.35s transform,.35s border-color;
+}
+.card:hover{transform:translateY(-6px);border-color:rgba(216,179,106,.45)}
+.property-img{height:245px;background-size:cover;background-position:center;position:relative}
+.tag{position:absolute;top:15px;left:15px;background:rgba(8,9,9,.78);backdrop-filter:blur(10px);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:11px}
+.card-body{padding:20px}
+.price{color:var(--accent2);font-weight:800;font-size:19px}
+.card h3{font-size:20px;margin:4px 0}
+.meta{display:flex;gap:15px;color:var(--muted);font-size:12px;margin-top:9px}
+.card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:20px;padding-top:15px;border-top:1px solid var(--line)}
+.card-foot a{font-size:12px;color:var(--accent2)}
+
+.categories{grid-template-columns:repeat(4,1fr)}
+.category{
+  min-height:190px;padding:25px;display:flex;flex-direction:column;justify-content:end;
+  border:1px solid var(--line);border-radius:var(--radius);background-size:cover;background-position:center;
+  position:relative;overflow:hidden;
+}
+.category:before{content:"";position:absolute;inset:0;background:linear-gradient(transparent 20%,rgba(0,0,0,.86))}
+.category>*{position:relative;z-index:1}
+.category h3{font-size:21px}.category p{color:#bbb;font-size:12px;margin-top:4px}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.image-panel{
+  min-height:560px;border-radius:30px;background:
+  linear-gradient(180deg,transparent,rgba(0,0,0,.4)),
+  url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1300&q=85") center/cover;
+  border:1px solid var(--line);
+}
+.big-copy h2{font-size:clamp(35px,5vw,62px);line-height:1;letter-spacing:-.055em;margin:13px 0 20px}
+.big-copy>p{color:var(--muted);max-width:550px}
+.points{display:grid;gap:13px;margin-top:28px}
+.point{display:flex;gap:14px;padding:15px 0;border-bottom:1px solid var(--line)}
+.point i{font-style:normal;color:var(--accent2);font-size:18px}.point strong{display:block;font-size:14px}.point span{font-size:12px;color:var(--muted)}
+
+.steps{grid-template-columns:repeat(4,1fr)}
+.step{padding:26px;border:1px solid var(--line);border-radius:20px;background:var(--surface)}
+.step-no{color:var(--accent2);font-size:12px;font-weight:800}.step h3{margin:18px 0 7px}.step p{font-size:13px;color:var(--muted)}
+
+.services{grid-template-columns:repeat(3,1fr)}
+.service{padding:28px;border:1px solid var(--line);border-radius:22px;background:var(--surface)}
+.icon{width:43px;height:43px;border:1px solid rgba(216,179,106,.35);border-radius:12px;display:grid;place-items:center;color:var(--accent2);margin-bottom:23px}
+.service h3{margin-bottom:8px}.service p{font-size:13px;color:var(--muted)}
+
+.testimonials{grid-template-columns:repeat(3,1fr)}
+.quote{padding:28px;background:var(--surface);border:1px solid var(--line);border-radius:22px}
+.quote p{color:#d5d5d0;font-size:14px}.quote .stars{margin:18px 0 8px}.quote small{color:var(--muted)}
+
+.faq{max-width:850px;margin:auto}
+details{border-bottom:1px solid var(--line);padding:21px 0}
+summary{cursor:pointer;list-style:none;font-weight:700;display:flex;justify-content:space-between}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--accent2);font-size:20px}
+details[open] summary:after{content:"−"}
+details p{color:var(--muted);font-size:14px;max-width:720px;padding-top:12px}
+
+.contact-box{
+  display:grid;grid-template-columns:1fr 1fr;gap:45px;background:var(--surface);
+  border:1px solid var(--line);border-radius:30px;padding:42px;
+}
+.contact-box h2{font-size:clamp(34px,4vw,55px);line-height:1;letter-spacing:-.05em;margin:10px 0 18px}
+.contact-box p{color:var(--muted)}
+.contact-info{display:grid;gap:14px;margin-top:28px}
+.contact-row{padding:15px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.025)}
+.contact-row small{display:block;color:#777;text-transform:uppercase;letter-spacing:.1em;font-size:9px}
+.contact-row span{font-size:13px}
+.form{display:grid;gap:11px}
+.form input,.form select,.form textarea{
+  width:100%;border:1px solid var(--line);background:#0c0e0e;color:white;
+  padding:14px;border-radius:13px;outline:0;
+}
+.form textarea{min-height:120px;resize:vertical}
+.form input:focus,.form select:focus,.form textarea:focus{border-color:rgba(216,179,106,.65)}
+.form-note{font-size:11px;color:#777}
+
+footer{padding:30px 0;border-top:1px solid var(--line);color:#858782;font-size:12px}
+.footer{display:flex;justify-content:space-between;gap:20px;align-items:center}
+.footer-links{display:flex;gap:20px}
+.float{
+  position:fixed;right:20px;bottom:20px;z-index:90;background:var(--accent);color:#17130b;
+  border-radius:999px;padding:13px 17px;font-weight:800;box-shadow:0 15px 40px rgba(0,0,0,.35)
+}
+.toast{
+  position:fixed;left:50%;bottom:25px;transform:translate(-50%,20px);opacity:0;pointer-events:none;
+  background:#f2eee3;color:#15130e;padding:13px 18px;border-radius:999px;font-size:13px;font-weight:700;
+  transition:.3s;z-index:200
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+@media(max-width:900px){
+  .nav-links,.nav-cta{display:none}.menu{display:block}
+  .nav.open .nav-links{
+    display:flex;position:absolute;top:76px;left:0;right:0;padding:20px;
+    background:#111313;flex-direction:column;border-bottom:1px solid var(--line)
+  }
+  .hero{min-height:720px}.hero-badge{display:none}
+  .search-box{grid-template-columns:1fr 1fr}.search-box .btn{grid-column:1/-1}
+  .properties,.categories,.steps,.services,.testimonials{grid-template-columns:1fr 1fr}
+  .split,.contact-box{grid-template-columns:1fr}
+  .image-panel{min-height:430px}
+}
+@media(max-width:600px){
+  .container{width:min(var(--max),calc(100% - 26px))}
+  section{padding:75px 0}.nav{height:68px}
+  .hero{padding-top:125px;min-height:720px}
+  .hero h1{font-size:52px}
+  .hero p{font-size:15px}
+  .search-box{grid-template-columns:1fr}.search-wrap{margin-top:-30px}
+  .properties,.categories,.steps,.services,.testimonials{grid-template-columns:1fr}
+  .section-head{display:block}.section-head p{margin-top:12px}
+  .contact-box{padding:25px}.image-panel{min-height:350px}
+  .footer{align-items:flex-start;flex-direction:column}
+  .float{right:13px;bottom:13px}
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="container nav" id="nav">
+    <a href="#home" class="logo">
+      <div class="logo-mark">DP</div><span>DHARAM PROPERTIES</span>
+    </a>
+    <div class="nav-links">
+      <a href="#properties">Properties</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="#contact">Enquire <span>↗</span></a>
+    <button class="menu" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow">Real Estate • Govindpuri • Kalkaji</div>
+      <h1>Find a place that feels <em>right.</em></h1>
+      <p>Dharam Properties helps buyers, sellers, tenants and property investors explore real-estate opportunities with a straightforward, personal approach.</p>
+      <div class="actions">
+        <a href="#properties" class="btn btn-primary">Explore Properties ↗</a>
+        <a href="#contact" class="btn btn-secondary">Talk to Us</a>
+      </div>
+      <div class="rating">
+        <span class="stars">★★★★★</span>
+        <span><strong>4.7/5</strong> · 24 Google reviews</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-badge"><strong>Govindpuri</strong><small>510A/6, Kalkaji, New Delhi</small></div>
+</section>
+
+<div class="search-wrap">
+  <div class="container">
+    <form class="search-box" onsubmit="searchProperties(event)">
+      <div class="field"><label>Looking for</label><select id="purpose"><option>Buy</option><option>Rent</option><option>Sell</option></select></div>
+      <div class="field"><label>Property type</label><select id="type"><option>Any Type</option><option>Apartment</option><option>Independent House</option><option>Plot</option><option>Commercial</option></select></div>
+      <div class="field"><label>Location</label><input id="location" placeholder="Govindpuri / Kalkaji"></div>
+      <div class="field"><label>Budget</label><select id="budget"><option>Any Budget</option><option>Under ₹50L</option><option>₹50L – ₹1Cr</option><option>₹1Cr+</option></select></div>
+      <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+  </div>
+</div>
+
+<section id="properties">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Featured collection</div><h2>Property opportunities.</h2></div>
+      <p>Use this demo section to showcase the client's current inventory. Replace the sample cards below with real listings, prices and photographs.</p>
+    </div>
+    <div class="grid properties">
+      <article class="card">
+        <div class="property-img" style="background-image:url('https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1000&q=80')"><span class="tag">For Sale</span></div>
+        <div class="card-body"><div class="price">₹ —</div><h3>Premium Residential Home</h3><div class="meta"><span>3 Beds</span><span>2 Baths</span><span>— sq ft</span></div><div class="card-foot"><span>Govindpuri, Delhi</span><a href="#contact">Enquire ↗</a></div></div>
+      </article>
+      <article class="card">
+        <div class="property-img" style="background-image:url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=80')"><span class="tag">Featured</span></div>
+        <div class="card-body"><div class="price">₹ —</div><h3>Modern Family Residence</h3><div class="meta"><span>3 Beds</span><span>2 Baths</span><span>— sq ft</span></div><div class="card-foot"><span>Kalkaji, Delhi</span><a href="#contact">Enquire ↗</a></div></div>
+      </article>
+      <article class="card">
+        <div class="property-img" style="background-image:url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1000&q=80')"><span class="tag">New</span></div>
+        <div class="card-body"><div class="price">₹ —</div><h3>Independent Property</h3><div class="meta"><span>4 Beds</span><span>3 Baths</span><span>— sq ft</span></div><div class="card-foot"><span>South Delhi</span><a href="#contact">Enquire ↗</a></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Browse by type</div><h2>Start with what you need.</h2></div>
+    </div>
+    <div class="grid categories">
+      <a class="category" href="#contact" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80')"><h3>Homes</h3><p>Comfortable residential spaces</p></a>
+      <a class="category" href="#contact" style="background-image:url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80')"><h3>Apartments</h3><p>Urban living options</p></a>
+      <a class="category" href="#contact" style="background-image:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80')"><h3>Plots</h3><p>Land and investment opportunities</p></a>
+      <a class="category" href="#contact" style="background-image:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80')"><h3>Commercial</h3><p>Spaces for business</p></a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container split">
+    <div class="image-panel"></div>
+    <div class="big-copy">
+      <div class="eyebrow">Why Dharam Properties</div>
+      <h2>Property decisions should feel simpler.</h2>
+      <p>Buying, selling or renting property is a major decision. This website is designed to make the first step easier: understand the requirement, discuss the right options and arrange the next conversation.</p>
+      <div class="points">
+        <div class="point"><i>01</i><div><strong>Local-first approach</strong><span>Focused on helping clients navigate the Delhi property market.</span></div></div>
+        <div class="point"><i>02</i><div><strong>Personal consultation</strong><span>Start with your budget, location and property requirement.</span></div></div>
+        <div class="point"><i>03</i><div><strong>Clear next steps</strong><span>Move from enquiry to viewing or discussion without unnecessary complexity.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">What we do</div><h2>Real estate services.</h2></div>
+      <p>Replace or expand these service descriptions with the exact services the business confirms.</p>
+    </div>
+    <div class="grid services">
+      <article class="service"><div class="icon">⌂</div><h3>Property Buying</h3><p>Discuss your preferred location, budget and property type to find suitable opportunities.</p></article>
+      <article class="service"><div class="icon">↗</div><h3>Property Selling</h3><p>Present your property requirement and connect for a discussion around the selling process.</p></article>
+      <article class="service"><div class="icon">▣</div><h3>Rental Assistance</h3><p>Share your rental requirement and receive guidance on suitable available options.</p></article>
+      <article class="service"><div class="icon">◇</div><h3>Investment Options</h3><p>Explore property opportunities based on your investment goals and preferred area.</p></article>
+      <article class="service"><div class="icon">⌕</div><h3>Property Consultation</h3><p>Talk through your requirement before deciding on the next property step.</p></article>
+      <article class="service"><div class="icon">↔</div><h3>Site Visit</h3><p>Once a suitable property is shortlisted, arrange a viewing through the business.</p></article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">The process</div><h2>From enquiry to property.</h2></div>
+    </div>
+    <div class="grid steps">
+      <div class="step"><span class="step-no">01 / REQUIREMENT</span><h3>Tell us what you need</h3><p>Location, budget, property type and your goal.</p></div>
+      <div class="step"><span class="step-no">02 / SHORTLIST</span><h3>Explore options</h3><p>Discuss suitable properties and narrow down your choices.</p></div>
+      <div class="step"><span class="step-no">03 / VIEWING</span><h3>See the property</h3><p>Arrange a visit to understand the property in person.</p></div>
+      <div class="step"><span class="step-no">04 / DECISION</span><h3>Move forward</h3><p>Proceed with the next steps after your property decision.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Client experience</div><h2>Built around trust.</h2></div>
+      <p>The business's Google listing currently shows a 4.7 rating from 24 reviews. Add verified customer testimonials here only after receiving permission.</p>
+    </div>
+    <div class="grid testimonials">
+      <div class="quote"><div class="stars">★★★★★</div><p>“Add a real customer review here once approved by the client.”</p><small>Verified customer · Replace with actual name</small></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>“Add a second verified review to make the website more credible.”</p><small>Verified customer · Replace with actual name</small></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>“Add a third customer experience here after permission.”</p><small>Verified customer · Replace with actual name</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-head" style="justify-content:center;text-align:center">
+      <div><div class="eyebrow">Questions</div><h2>Frequently asked.</h2></div>
+    </div>
+    <div class="faq">
+      <details open><summary>What areas do you cover?</summary><p>Dharam Properties is located in Govindpuri, Kalkaji, New Delhi. Confirm the exact service areas with the business before publishing a wider coverage claim.</p></details>
+      <details><summary>Can I enquire about buying a property?</summary><p>Yes. Use the enquiry form below to share your preferred location, budget and property type.</p></details>
+      <details><summary>Can I contact you about renting?</summary><p>Yes. Select “Rent” in the enquiry form and describe what you are looking for.</p></details>
+      <details><summary>Can I request a property viewing?</summary><p>Yes. Send an enquiry first so the business can confirm availability and arrange the appropriate next step.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="contact-box">
+      <div>
+        <div class="eyebrow">Get in touch</div>
+        <h2>Let's find your next property.</h2>
+        <p>Tell us what you're looking for and start the conversation.</p>
+        <div class="contact-info">
+          <div class="contact-row"><small>Office</small><span>510A/6, Govindpuri, Kalkaji, New Delhi, Delhi 110019</span></div>
+          <div class="contact-row"><small>Hours</small><span>Mon–Sat · Business hours shown on Google: around 10:00 AM–11:00 PM</span></div>
+          <div class="contact-row"><small>Location</small><span><a href="https://maps.app.goo.gl/bDLzLiSeELRuhTs38" target="_blank" rel="noopener" style="color:var(--accent2)">Open Dharam Properties in Google Maps ↗</a></span></div>
+        </div>
+      </div>
+
+      <form class="form" onsubmit="submitInquiry(event)">
+        <input id="name" required placeholder="Full name">
+        <input id="phone" required type="tel" placeholder="Phone number">
+        <input id="email" type="email" placeholder="Email (optional)">
+        <select id="interest"><option>I'm looking to Buy</option><option>I'm looking to Rent</option><option>I want to Sell</option><option>I'm interested in Investment</option></select>
+        <input id="preferred" placeholder="Preferred location / property type">
+        <textarea id="message" placeholder="Tell us about your requirement"></textarea>
+        <button class="btn btn-primary" type="submit">Send Enquiry ↗</button>
+        <div class="form-note">Demo form: connect this form to the client's WhatsApp, email, CRM or database before launch.</div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer">
+    <div>© 2026 Dharam Properties. All rights reserved.</div>
+    <div class="footer-links"><a href="#home">Back to top ↑</a><a href="https://maps.app.goo.gl/bDLzLiSeELRuhTs38" target="_blank">Google Maps ↗</a></div>
+  </div>
+</footer>
+
+<a class="float" href="#contact">Enquire ↗</a>
+<div class="toast" id="toast"></div>
+
+<script>
+function toggleMenu(){document.getElementById('nav').classList.toggle('open')}
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
+
+function toast(msg){
+  const el=document.getElementById('toast'); el.textContent=msg; el.classList.add('show');
+  setTimeout(()=>el.classList.remove('show'),3200);
+}
+function searchProperties(e){
+  e.preventDefault();
+  const purpose=document.getElementById('purpose').value;
+  const type=document.getElementById('type').value;
+  const loc=document.getElementById('location').value || 'your preferred area';
+  const budget=document.getElementById('budget').value;
+  toast(`Showing demo options for ${purpose} · ${type} · ${loc} · ${budget}`);
+  document.getElementById('properties').scrollIntoView({behavior:'smooth'});
+}
+function submitInquiry(e){
+  e.preventDefault();
+  const name=document.getElementById('name').value.trim();
+  const interest=document.getElementById('interest').value;
+  toast(`Thanks ${name}. Your ${interest.toLowerCase()} enquiry is ready to connect.`);
+  e.target.reset();
+}
+</script>
+</body>
+</html>
