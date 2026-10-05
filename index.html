@@ -84,11 +84,10 @@ body{padding-bottom:4.5rem}@media(min-width:1024px){body{padding-bottom:0}}
   <a href="#stats" class="absolute bottom-40 right-8 hidden md:flex flex-col items-center gap-3 text-[.65rem] tracking-[.3em] uppercase text-ivory/60" aria-label="Scroll down">Scroll<span class="w-px h-14 bg-gold/70"></span></a>
 </section>
   
-<!-- SEARCH PANEL (Moved outside hero to prevent clipping) -->
-<div class="relative z-20 max-w-6xl mx-auto px-4 -mt-20 md:-mt-28">
+<!-- SEARCH PANEL (Hero ke bahar, taaki cut na ho) -->
+<div class="relative z-30 max-w-6xl mx-auto px-4 -mt-24 md:-mt-28">
   <form id="hs" class="bg-ivory text-char rounded-xl shadow-2xl p-4 md:p-6 grid grid-cols-2 md:grid-cols-6 gap-3 md:gap-4 items-end" aria-label="Property search">
     
-    <!-- Looking To -->
     <div class="flex flex-col w-full">
         <label class="text-[.68rem] font-semibold uppercase tracking-widest text-warm mb-1">Looking to</label>
         <select id="h-mode" class="fld bg-white text-black">
@@ -97,31 +96,29 @@ body{padding-bottom:4.5rem}@media(min-width:1024px){body{padding-bottom:0}}
         </select>
     </div>
 
-    <!-- Location -->
     <div class="flex flex-col w-full">
         <label class="text-[.68rem] font-semibold uppercase tracking-widest text-warm mb-1">Location</label>
-        <select id="h-loc" class="fld bg-white text-black loc">
-            <!-- options populated by JS -->
-        </select>
+        <select id="h-loc" class="fld bg-white text-black loc"></select>
     </div>
 
-    <!-- Type -->
     <div class="flex flex-col w-full">
         <label class="text-[.68rem] font-semibold uppercase tracking-widest text-warm mb-1">Type</label>
         <select id="h-type" class="fld bg-white text-black type">
-            <!-- options populated by JS -->
+            <option value="">Any Type</option>
+            <option value="Apartment">Apartment</option>
+            <option value="Villa">Villa</option>
+            <option value="Penthouse">Penthouse</option>
+            <option value="Builder Floor">Builder Floor</option>
+            <option value="Commercial">Commercial</option>
+            <option value="Land & Plot">Land & Plot</option>
         </select>
     </div>
 
-    <!-- Max Price -->
     <div class="flex flex-col w-full">
         <label class="text-[.68rem] font-semibold uppercase tracking-widest text-warm mb-1">Max price</label>
-        <select id="h-max" class="fld bg-white text-black">
-            <!-- options populated by JS -->
-        </select>
+        <select id="h-max" class="fld bg-white text-black"></select>
     </div>
 
-    <!-- Bedrooms -->
     <div class="flex flex-col w-full">
         <label class="text-[.68rem] font-semibold uppercase tracking-widest text-warm mb-1">Bedrooms</label>
         <select id="h-bed" class="fld bg-white text-black">
@@ -133,13 +130,12 @@ body{padding-bottom:4.5rem}@media(min-width:1024px){body{padding-bottom:0}}
         </select>
     </div>
 
-    <!-- Search Button -->
     <div class="col-span-2 md:col-span-1 w-full">
         <button class="btn b-gold w-full !min-h-[3.1rem]">Search</button>
     </div>
 
   </form>
-</div>
+  </div>
   
 <!-- STATS -->
 <section id="stats" class="dk2 pt-16 md:pt-24 pb-16">
