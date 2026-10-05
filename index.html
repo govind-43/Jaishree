@@ -72,7 +72,7 @@ body{padding-bottom:4.5rem}@media(min-width:1024px){body{padding-bottom:0}}
 
 <main id="main">
 <!-- HERO -->
-<section id="home" class="dk relative min-h-[100svh] flex items-end overflow-visible">
+<section id="home" class="dk relative min-h-[100svh] flex items-end overflow-hidden">
   <div id="hbg" class="absolute inset-0 will-change-transform"><img data-hero alt="Luxury residence at dusk" class="w-full h-full object-cover scale-110" fetchpriority="high"></div>
   <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-ink/40"></div>
   <div class="wrap relative w-full pt-36 pb-44 md:pb-52">
@@ -83,18 +83,18 @@ body{padding-bottom:4.5rem}@media(min-width:1024px){body{padding-bottom:0}}
   </div>
   <a href="#stats" class="absolute bottom-40 right-8 hidden md:flex flex-col items-center gap-3 text-[.65rem] tracking-[.3em] uppercase text-ivory/60" aria-label="Scroll down">Scroll<span class="w-px h-14 bg-gold/70"></span></a>
   <!-- Search panel -->
-  <form id="hs" class="absolute z-10 left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 w-[calc(100%-2.5rem)] max-w-6xl bg-ivory text-char rounded-xl shadow-2xl p-4 md:p-5 grid grid-cols-2 md:grid-cols-6 gap-3 items-end rounded-xl" aria-label="Property search">
-    <label class="text-[.68rem] font-semibold uppercase tracking-widest text-warm">Looking to<select id="h-mode" class="fld mt-1 bg-white"><option value="buy">Buy</option><option value="rent">Rent</option></select></label>
-    <label class="text-[.68rem] font-semibold uppercase tracking-widest text-warm">Location<select id="h-loc" class="fld mt-1 bg-white loc"></select></label>
-    <label class="text-[.68rem] font-semibold uppercase tracking-widest text-warm">Type<select id="h-type" class="fld mt-1 bg-white typ"></select></label>
-    <label class="text-[.68rem] font-semibold uppercase tracking-widest text-warm">Max price<select id="h-max" class="fld mt-1 bg-white"></select></label>
-    <label class="text-[.68rem] font-semibold uppercase tracking-widest text-warm">Bedrooms<select id="h-bed" class="fld mt-1 bg-white"><option value="0">Any</option><option value="1">1+</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option></select></label>
+  <form id="hs" class="absolute z-10 left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 w-[calc(100%-2.5rem)] max-w-6xl bg-ivory text-char rounded-xl shadow-2xl p-4 md:p-5 grid grid-cols-2 md:grid-cols-6 gap-3 items-end" aria-label="Property search">
+    <label class="text-[.68rem] font-semibold uppercase tracking-widest text-warm">Looking to<select id="h-mode" class="fld mt-1 bg-white text-black"><option value="buy">Buy</option><option value="rent">Rent</option></select></label>
+    <label class="text-[.68rem] font-semibold uppercase tracking-widest text-warm">Location<select id="h-loc" class="fld mt-1 bg-white text-black loc"></select></label>
+    <label class="text-[.68rem] font-semibold uppercase tracking-widest text-warm">Type<select id="h-type" class="fld mt-1 bg-white text-black typ"></select></label>
+    <label class="text-[.68rem] font-semibold uppercase tracking-widest text-warm">Max price<select id="h-max" class="fld mt-1 bg-white text-black"></select></label>
+    <label class="text-[.68rem] font-semibold uppercase tracking-widest text-warm">Bedrooms<select id="h-bed" class="fld mt-1 bg-white text-black"><option value="0">Any</option><option value="1">1+</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option></select></label>
     <button class="btn b-gold col-span-2 md:col-span-1">Search</button>
   </form>
 </section>
 
 <!-- STATS -->
-<section id="stats" class="dk2 relative z-10 pt-40 md:pt-44 pb-16"><div class="wrap grid grid-cols-2 lg:grid-cols-4 gap-y-10 text-center">
+<section id="stats" class="dk2 pt-40 md:pt-44 pb-16"><div class="wrap grid grid-cols-2 lg:grid-cols-4 gap-y-10 text-center">
   <div class="rv"><div class="sf text-5xl md:text-6xl text-gold"><span data-count="500">0</span>+</div><p class="eye !text-ivory/70 mt-2">Properties Sold</p></div>
   <div class="rv"><div class="sf text-5xl md:text-6xl text-gold"><span data-count="250">0</span>+</div><p class="eye !text-ivory/70 mt-2">Happy Clients</p></div>
   <div class="rv"><div class="sf text-5xl md:text-6xl text-gold"><span data-count="15">0</span>+</div><p class="eye !text-ivory/70 mt-2">Years Experience</p></div>
