@@ -82,13 +82,16 @@ body{padding-bottom:4.5rem}@media(min-width:1024px){body{padding-bottom:0}}
     <div class="flex flex-col sm:flex-row gap-3 mt-9 rv"><a href="#properties" class="btn b-gold mag">Explore Properties</a><button data-open="booking" class="btn b-line">Schedule a Consultation</button></div>
   </div>
   <a href="#stats" class="absolute bottom-40 right-8 hidden md:flex flex-col items-center gap-3 text-[.65rem] tracking-[.3em] uppercase text-ivory/60" aria-label="Scroll down">Scroll<span class="w-px h-14 bg-gold/70"></span></a>
-  <!-- Search panel -->
-  <form id="hs" class="absolute z-10 left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 w-[calc(100%-2rem)] max-w-7xl bg-ivory text-char rounded-xl shadow-2xl p-4 md:p-6 grid grid-cols-2 lg:grid-cols-6 gap-3 md:gap-4 items-end" aria-label="Property search">
+</section>
+  
+<!-- SEARCH PANEL (Moved outside hero to prevent clipping) -->
+<div class="relative z-20 max-w-6xl mx-auto px-4 -mt-20 md:-mt-28">
+  <form id="hs" class="bg-ivory text-char rounded-xl shadow-2xl p-4 md:p-6 grid grid-cols-2 md:grid-cols-6 gap-3 md:gap-4 items-end" aria-label="Property search">
     
     <!-- Looking To -->
     <div class="flex flex-col w-full">
         <label class="text-[.68rem] font-semibold uppercase tracking-widest text-warm mb-1">Looking to</label>
-        <select id="h-mode" class="fld bg-white text-char">
+        <select id="h-mode" class="fld bg-white text-black">
             <option value="buy">Buy</option>
             <option value="rent">Rent</option>
         </select>
@@ -97,7 +100,7 @@ body{padding-bottom:4.5rem}@media(min-width:1024px){body{padding-bottom:0}}
     <!-- Location -->
     <div class="flex flex-col w-full">
         <label class="text-[.68rem] font-semibold uppercase tracking-widest text-warm mb-1">Location</label>
-        <select id="h-loc" class="fld bg-white text-char loc">
+        <select id="h-loc" class="fld bg-white text-black loc">
             <!-- options populated by JS -->
         </select>
     </div>
@@ -105,7 +108,7 @@ body{padding-bottom:4.5rem}@media(min-width:1024px){body{padding-bottom:0}}
     <!-- Type -->
     <div class="flex flex-col w-full">
         <label class="text-[.68rem] font-semibold uppercase tracking-widest text-warm mb-1">Type</label>
-        <select id="h-type" class="fld bg-white text-char type">
+        <select id="h-type" class="fld bg-white text-black type">
             <!-- options populated by JS -->
         </select>
     </div>
@@ -113,7 +116,7 @@ body{padding-bottom:4.5rem}@media(min-width:1024px){body{padding-bottom:0}}
     <!-- Max Price -->
     <div class="flex flex-col w-full">
         <label class="text-[.68rem] font-semibold uppercase tracking-widest text-warm mb-1">Max price</label>
-        <select id="h-max" class="fld bg-white text-char">
+        <select id="h-max" class="fld bg-white text-black">
             <!-- options populated by JS -->
         </select>
     </div>
@@ -121,7 +124,7 @@ body{padding-bottom:4.5rem}@media(min-width:1024px){body{padding-bottom:0}}
     <!-- Bedrooms -->
     <div class="flex flex-col w-full">
         <label class="text-[.68rem] font-semibold uppercase tracking-widest text-warm mb-1">Bedrooms</label>
-        <select id="h-bed" class="fld bg-white text-char">
+        <select id="h-bed" class="fld bg-white text-black">
             <option value="0">Any</option>
             <option value="1">1+</option>
             <option value="2">2+</option>
@@ -131,15 +134,16 @@ body{padding-bottom:4.5rem}@media(min-width:1024px){body{padding-bottom:0}}
     </div>
 
     <!-- Search Button -->
-    <div class="col-span-2 lg:col-span-1 w-full">
+    <div class="col-span-2 md:col-span-1 w-full">
         <button class="btn b-gold w-full !min-h-[3.1rem]">Search</button>
     </div>
 
   </form>
-</section>
-
+</div>
+  
 <!-- STATS -->
-<section id="stats" class="dk2 pt-52 md:pt-64 pb-16"><div class="wrap grid grid-cols-2 lg:grid-cols-4 gap-y-10 text-center">
+<section id="stats" class="dk2 pt-16 md:pt-24 pb-16">
+  <div class="wrap grid grid-cols-2 lg:grid-cols-4 gap-y-10 text-center">
   <div class="rv"><div class="sf text-5xl md:text-6xl text-gold"><span data-count="500">0</span>+</div><p class="eye !text-ivory/70 mt-2">Properties Sold</p></div>
   <div class="rv"><div class="sf text-5xl md:text-6xl text-gold"><span data-count="250">0</span>+</div><p class="eye !text-ivory/70 mt-2">Happy Clients</p></div>
   <div class="rv"><div class="sf text-5xl md:text-6xl text-gold"><span data-count="15">0</span>+</div><p class="eye !text-ivory/70 mt-2">Years Experience</p></div>
